@@ -1,0 +1,32 @@
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .message {
+    font-size: 1.5em;
+    color: green;
+    margin-top: 20px;
+  }
+
+  .stats {
+    display: flex;
+   // justify-content: space-around; /* Adjust as needed */
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+ 
+  /*  hide the card image initially */
+app-card img {
+  display: none;
+}
+
+/* Style to show the card image when flipped */
+app-card.flipped img {
+  display: block;
+}

@@ -1,0 +1,12 @@
+
+ <div class="card" (click)="handleCardClick()">
+    <div class="card-inner" [ngClass]="{ 'flipped': flipped }">
+      <div class="card-front">
+        <div class="card-cover"></div>
+      </div>
+      <div class="card-back">
+        <img [src]="cardValue" alt="Card" class="card-image">
+      </div>
+    </div>
+  </div>
+  

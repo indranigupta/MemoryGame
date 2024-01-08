@@ -1,0 +1,23 @@
+
+<div class="board">
+    <app-card
+      *ngFor="let card of cards"
+       [cardValue]="card.image"
+      [flipped]="card.flipped"
+      [matched]="card.matched"
+      (cardClicked)="handleCardClick(card)"
+    >
+  </app-card>
+  </div>
+
+  
+  <div *ngIf="gameComplete" class="message">Congratulations! 🎉🎊🎉🎊🎉🎊 You've matched all the cards.</div>
+    <div class="stats">
+      <div class="stat-item">Score: {{ score }}</div>
+      <div class="stat-item">Moves: {{ moves }}</div>
+      <div class="stat-item">Misses: {{ misses }}</div>
+      <div class="stat-item">Accuracy: {{ accuracy }}%</div>
+    </div>
+
+
+ 

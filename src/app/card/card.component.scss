@@ -1,0 +1,69 @@
+/* card.component.scss */
+.card {
+  position: relative;
+  width: 150px; /* Increased width */
+  height: 200px; /* Increased height */
+  border: 2px solid #4CAF50; /* Changed border color */
+  margin: 10px; /* Increased margin */
+  overflow: hidden;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: transform 0.5s;
+  border-radius: 15px; /* Increased border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+
+.card.clicked .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3498db; /* Changed color for card faces */
+  backface-visibility: hidden;
+  border-radius: 15px; /* Added border radius */
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  /* Add styles for the back of the card if needed */
+}
+
+.card-cover {
+  width: 100%;
+  height: 100%;
+  background-color: #3498db; /* Changed color for the covered area */
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Add a subtle hover effect */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
